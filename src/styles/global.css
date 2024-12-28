@@ -1,21 +1,112 @@
 html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+/* estilos da navegação */
+.nav-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hamburguer {
+  align-self: flex-end;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburguer .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+  transition: all 0.3s ease-in-out;
+}
+header {
+  position: relative; /* Adicione esta linha */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: none;
+  width: 100%;
+  background-color: #ff9776;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: #ff7f50;
   }
   
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
+
+.expanded {
+  display: block;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
     padding: 1rem;
-    line-height: 1.5;
   }
-  
-  * {
-    box-sizing: border-box;
+
+  .nav-links {
+    display: flex;
+    position: static;
+    width: auto;
+    background: none;
+    padding: 0;
+    box-shadow: none;
   }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
+
+  .nav-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #ff9776;
   }
+
+  .nav-links a:hover {
+    background-color: transparent;
+    color: #ff7f50;
+  }
+
+  .hamburguer {
+    display: none;
+  }
+}
