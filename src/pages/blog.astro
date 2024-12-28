@@ -1,27 +1,37 @@
 ---
-
+const descricao = "aqui estou usando variáveis para renderizar no html"
 ---
-<!DOCTYPE html>
-<html lang='pt-br'>
-<head>
-<meta charset='UTF-8' />
-<meta http-equiv='X-UA:Compatible' content='IE=edge' />
-<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-<title>Blog</title>
-</head>
 
-<body>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA:Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+  </head>
+
+  <body>
     <a href="/">Início</a>
     <a href="/about/">Sobre</a>
     <a href="/blog/">Blog</a>
-  
+
     <h1>Meu Site Astro</h1>
     <h1>Meu Blog de Aprendizado sobre Astro</h1>
     <p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
-
-</body>
+    <p style="color: blue;">{descricao}</p>
+    <ul>
+      <li>
+        <a href="/posts/post-1/">Primeiro Post</a>
+      </li>
+      <li>
+        <a href="/posts/post-2/">Segundo Post</a>
+      </li>
+      <li>
+        <a href="/posts/post-3/">Terceiro Post</a>
+      </li>
+    </ul>
+  </body>
 </html>
 
-<style>
-
-</style>
+<style></style>
