@@ -1,0 +1,27 @@
+---
+const { frontmatter } = Astro.props;
+---
+<html lang="pt-BR">
+    <style>
+        img{
+            width: 50%;
+            height: auto;
+        }
+    </style>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} /> 
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <article>
+      <h1>{frontmatter.title}</h1>
+      <p>Escrito por {frontmatter.author}</p>
+      <p>Publicado em: {frontmatter.pubDate.toString().slice(0,10)}</p>
+      <slot />
+      <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    </article>
+  </body>
+</html>
