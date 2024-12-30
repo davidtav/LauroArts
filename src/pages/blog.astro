@@ -1,26 +1,11 @@
 ---
 import "../styles/global.css"
-import Navigation from "../components/Navigation.astro"
-import Footer from "../components/Footer.astro"
+import BlogLayout from "../layouts/BlogLayout.astro"
 
 const descricao = "aqui estou usando variáveis para renderizar no html"
 ---
-
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA:Compatible" content="IE=edge" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
-  </head>
-
-  <body>
-    <Navigation/>
-    
-
-    <h1>Meu Site Astro</h1>
+<BlogLayout>
+  <h1>Meu Site Astro</h1>
     <h1>Meu Blog de Aprendizado sobre Astro</h1>
     <p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
     <p style="color: blue;">{descricao}</p>
@@ -35,8 +20,6 @@ const descricao = "aqui estou usando variáveis para renderizar no html"
         <a href="/posts/post-3/">Terceiro Post</a>
       </li>
     </ul>
-    <Footer/>
-  </body>
-</html>
+</BlogLayout>
 
-<style></style>
+
