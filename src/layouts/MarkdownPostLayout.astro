@@ -1,4 +1,5 @@
 ---
+import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
@@ -10,12 +11,13 @@ const { frontmatter } = Astro.props;
     <meta name="generator" content={Astro.generator} /> 
     <title>{frontmatter.title}</title>
   </head>
-
+  <BaseLayout pageTitle={frontmatter.title}>  
   <body>
-    <article>
+      <article>
       <h1>{frontmatter.title}</h1>
       <p>Escrito por {frontmatter.author}</p>
       <slot />
     </article>
   </body>
+</BaseLayout>
 </html>
