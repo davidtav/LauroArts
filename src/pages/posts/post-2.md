@@ -7,7 +7,7 @@ image:
     url: "https://media2.dev.to/dynamic/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9eak287wekuigld2ln7w.png"
     alt: "foguete"
 pubDate: 30-12-2024
-tags: ["astro", "blogueirando", "aprendendo em público", "sucessos"]
+tags: ["astro"]
 ---
 ## Segundo Post
 
